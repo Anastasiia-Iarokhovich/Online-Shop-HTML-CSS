@@ -1,0 +1,21 @@
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--background-color);
+}
+
+.header__title {
+    margin: 0;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 1.2rem;
+}
+
+.header__icons {
+    color: grey;
+}
+
+.header__icons-cart {
+    padding-left: 2rem;
+}

@@ -1,0 +1,18 @@
+.card-container__title {
+    color: grey;
+    cursor: default;
+
+    padding-top: 0;
+    padding-bottom: 0;
+
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+}
+
+.card-container-cards {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    /* justify-content: left; */
+    justify-content: center;
+}

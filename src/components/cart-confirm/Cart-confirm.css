@@ -1,0 +1,31 @@
+.cart-confirm {
+    background-color: white;
+    border-radius: 1.875rem 1.875rem 0.9rem 0.9rem;
+    min-height: 5.625rem;
+    max-width: 15.625rem;
+}
+
+.cart-confirm__text {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 1rem 0.5rem 0.9rem;
+}
+
+.cart-confirm__text-total {
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+
+.cart-confirm__text-sum {
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+
+.cart-confirm__btn {
+    color: white;
+    background-color: black;
+    text-decoration: none;
+    border-radius: 0.9rem;
+    padding: 0.7rem 2.2rem 0.7rem 2.2rem;
+}
