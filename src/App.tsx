@@ -11,9 +11,9 @@ function App() {
       <Header title={'qpick'} />
       <main>
         <Routes>
-          <Route path="/home" element={<CardContainer title={'Наушники'} />} />
+          <Route path="/" element={<CardContainer category={'Наушники'} />} />
           <Route path="/cart" element={<Cart title={'Корзина'} />} />
-          <Route path="*" element={<CardContainer title={'Наушники'} />} />
+          <Route path="*" element={<CardContainer category={'Наушники'} />} />
         </Routes>
         <Outlet />
       </main>

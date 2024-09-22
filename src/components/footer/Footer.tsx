@@ -1,20 +1,29 @@
 import * as React from 'react';
 import './Footer.css';
+import { useNavigate } from 'react-router-dom';
 
 interface IFooterProps {
   title: string;
 }
 
-
 const Footer: React.FC<IFooterProps> = ({ title }) => {
+  const navigate = useNavigate();
+
+  const handleCartClick = () => {
+    navigate('/cart');
+  };
+  const handleShopClick = () => {
+    navigate('/');
+  };
+
   return (
     <footer className='footer'>
        
-      <h1 className='footer__title'>{title}</h1>
+      <h1 className='footer__title' onClick={handleShopClick}>{title}</h1>
 
       <div className='footer__menu-col-1'>
         <p className='footer__menu-col-1-item'>Избранное</p>
-        <p className='footer__menu-col-1-item'>Корзина</p>
+        <p className='footer__menu-col-1-item' onClick={handleCartClick}>Корзина</p>
         <p className='footer__menu-col-1-item'>Контакты</p>
       </div>
 
@@ -32,14 +41,14 @@ const Footer: React.FC<IFooterProps> = ({ title }) => {
       </div>
 
       <div className='footer__icons'>
-      <a href='#'>
-            <img className='footer__icons-icon' src='images/vk.png' alt='vk'/>
+        <a href='https://vk.com'>
+          <img className='footer__icons-icon' src='images/vk.png' alt='vk'/>
         </a>
-        <a href='#'>
-            <img className='footer__icons-icon' src='images/telegram.png' alt='telegram'/>
+        <a href='https://telegram.org'>
+          <img className='footer__icons-icon' src='images/telegram.png' alt='telegram'/>
         </a>
-        <a href='#'>
-            <img className='footer__icons-icon' src='images/whatsup.png' alt='whatsup'/>
+        <a href='https://www.whatsapp.com'>
+          <img className='footer__icons-icon' src='images/whatsup.png' alt='whatsup'/>
         </a>
       </div>
 

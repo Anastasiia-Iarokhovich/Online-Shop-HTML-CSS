@@ -1,23 +1,44 @@
 import * as React from 'react';
 import './Card-container.css';
 import Card from '../card/Card';
+import { Product, ProductService } from '../../services/Product';
+import { useEffect, useState } from 'react';
 
 interface ICardContainerProps {
-  title: string;
+  category: string;
 }
 
-const CardContainer: React.FC<ICardContainerProps> = ({ title }) => {
+const CardContainer: React.FC<ICardContainerProps> = ({ category: category}) => {
+
+  const [products, setProducts] = useState<Product[]>([]);
+
+  useEffect(() => {
+    const loadProducts = async () => {
+      const productService = new ProductService();
+      const loadedProducts = await productService.getProducts();
+      setProducts(loadedProducts);
+    };
+    loadProducts();
+  }, []);
+
   return (
     <section className='card-container'>
 
-        <h3 className='card-container__title'>{title}</h3>
+      <h3 className='card-container__category'>{category}</h3>
 
-        <div className='card-container-cards'>
-            <Card title={'Apple BYZ S852I'} oldPrice={3527} newPrice={2927} currency={'₽'} grade={4.5} img={'images/img1.png'}/>
-            <Card title={'Apple BYZ S852I'} oldPrice={3527} newPrice={2927} currency={'₽'} grade={4.5} img={'images/img1.png'}/>
-            <Card title={'Apple BYZ S852I'} oldPrice={3527} newPrice={2927} currency={'₽'} grade={4.5} img={'images/img1.png'}/>
-            <Card title={'Apple BYZ S852I'} oldPrice={3527} newPrice={2927} currency={'₽'} grade={4.5} img={'images/img1.png'}/>
-        </div>
+      <div className='card-container-cards'>       
+        {products.map(product => (
+          <Card
+            key={product.id}
+            title={product.title}
+            oldPrice={1234}
+            newPrice={product.price}
+            currency={product.currency}
+            grade={product.rate}
+            img={product.img}
+          />
+        ))}
+      </div>
       
     </section>
   );

@@ -22,7 +22,7 @@
 .footer__title {
     text-transform: uppercase;
     font-size: 1.2rem;
-    cursor: default;
+    cursor: pointer;
 }
 
 .footer__menu-col-1-item {
