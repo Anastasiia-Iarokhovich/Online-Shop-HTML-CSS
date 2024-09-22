@@ -1,0 +1,11 @@
+.cart__content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: top;
+}
+
+.cart__title {
+    margin: 0 0 0.5rem 0;	
+    padding: 0;
+}

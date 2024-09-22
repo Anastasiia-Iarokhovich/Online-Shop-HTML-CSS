@@ -10,12 +10,18 @@
     text-decoration: none;
     text-transform: uppercase;
     font-size: 1.2rem;
+    cursor: default;
 }
 
 .header__icons {
     color: grey;
 }
 
+.header__icons-favorite {
+    cursor: pointer;
+}
+
 .header__icons-cart {
     padding-left: 2rem;
+    cursor: pointer;
 }

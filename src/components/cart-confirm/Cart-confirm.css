@@ -1,7 +1,9 @@
 .cart-confirm {
     background-color: white;
     border-radius: 1.875rem 1.875rem 0.9rem 0.9rem;
-    min-height: 5.625rem;
+
+    /* add media query for mobile and tablet*/
+    max-height: 5rem;
     max-width: 15.625rem;
 }
 
@@ -14,12 +16,12 @@
 .cart-confirm__text-total {
     text-transform: uppercase;
     font-weight: bold;
-    font-size: 0.9rem;
+    font-size: 0.85rem;
 }
 
 .cart-confirm__text-sum {
     font-weight: bold;
-    font-size: 0.9rem;
+    font-size: 0.85rem;
 }
 
 .cart-confirm__btn {

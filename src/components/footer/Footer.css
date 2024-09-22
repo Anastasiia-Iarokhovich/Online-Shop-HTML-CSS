@@ -1,9 +1,10 @@
+/* add media query for mobile and tablet */
 .footer {
     display: flex;
     justify-content: space-between;
     align-items: baseline;
-    border-top-left-radius: 25px;
-    border-top-right-radius: 25px;
+    border-top-left-radius: 1.563rem;
+    border-top-right-radius: 1.563rem;
     padding-left: 1rem;
     padding-right: 1rem;
     padding-top: 0;

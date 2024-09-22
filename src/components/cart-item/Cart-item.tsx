@@ -30,10 +30,10 @@ const CartItem: React.FC<ICartItemProps> = ({ title, price, currency, image }) =
 
       <div className='cart-item__footer'>
 
-        <div className='cart-item__footer-counter'>
-          <a href='#' className='cart-item__footer-counter-btn'>-</a>
-          <p className='cart-item__footer-counter-num'>1</p>
-          <a href='#' className='cart-item__footer-counter-btn'>+</a>
+        <div className='cart-item__footer-container'>
+          <a href='#' className='cart-item__footer-container-btn'>-</a>
+          <p className='cart-item__footer-container-counter'>1</p>
+          <a href='#' className='cart-item__footer-container-btn'>+</a>
         </div>
 
         <p className='cart-item__footer-total'>3527 ₽</p>
