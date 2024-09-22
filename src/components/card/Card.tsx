@@ -8,9 +8,10 @@ interface ICardProps {
   newPrice: number;
   currency: string;
   grade: number;
+  onClick: () => void;
 }
 
-const Card: React.FC<ICardProps> = ({ img, title, oldPrice, newPrice, currency, grade }) => {
+const Card: React.FC<ICardProps> = ({ img, title, oldPrice, newPrice, currency, grade, onClick }) => {
   return (
     <div className='card'>
 
@@ -36,7 +37,7 @@ const Card: React.FC<ICardProps> = ({ img, title, oldPrice, newPrice, currency, 
           <span className='card__content-bottom-grade-note'>{grade}</span>
         </div>
 
-        <a href='#' className='card__content-bottom-button'>Купить</a>
+        <a href='#' className='card__content-bottom-button' onClick={onClick}>Купить</a>
       </div>        
     </div>
   );

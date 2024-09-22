@@ -1,14 +1,14 @@
 import * as React from 'react';
 import './Card-container.css';
 import Card from '../card/Card';
-import { Product, ProductService } from '../../services/Product';
+import { Product, ProductService } from '../../services/ProductsService';
 import { useEffect, useState } from 'react';
 
 interface ICardContainerProps {
   category: string;
 }
 
-const CardContainer: React.FC<ICardContainerProps> = ({ category: title}) => {
+const CardContainer: React.FC<ICardContainerProps> = ({}) => {
 
   const [products, setProducts] = useState<Product[]>([]);
 
@@ -44,6 +44,7 @@ const CardContainer: React.FC<ICardContainerProps> = ({ category: title}) => {
                       currency={product.currency}
                       grade={product.rate}
                       img={product.img}
+                      onClick={() => console.log(product.title)}
                     />
                   )
                 )
