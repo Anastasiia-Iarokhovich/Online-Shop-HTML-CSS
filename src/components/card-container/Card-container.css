@@ -1,12 +1,8 @@
 .card-container__category {
     color: grey;
     cursor: default;
-
-    padding-top: 0;
-    padding-bottom: 0;
-
+    padding-left: 0.6rem;
     margin-top: 0;
-    margin-bottom: 0.5rem;
 }
 
 .card-container-cards {

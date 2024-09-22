@@ -8,7 +8,7 @@ interface ICardContainerProps {
   category: string;
 }
 
-const CardContainer: React.FC<ICardContainerProps> = ({ category: category}) => {
+const CardContainer: React.FC<ICardContainerProps> = ({ category: title}) => {
 
   const [products, setProducts] = useState<Product[]>([]);
 
@@ -21,26 +21,38 @@ const CardContainer: React.FC<ICardContainerProps> = ({ category: category}) => 
     loadProducts();
   }, []);
 
+  const categories = ['Наушники', 'Мобильные телефоны', 'Планшеты', 'Телевизоры'];
+
   return (
-    <section className='card-container'>
+    <>
+      {
+        categories.map(category => (
+          <section className='card-container'>
 
-      <h3 className='card-container__category'>{category}</h3>
+            <h3 className='card-container__category' key={category}>{category}</h3>
 
-      <div className='card-container-cards'>       
-        {products.map(product => (
-          <Card
-            key={product.id}
-            title={product.title}
-            oldPrice={1234}
-            newPrice={product.price}
-            currency={product.currency}
-            grade={product.rate}
-            img={product.img}
-          />
-        ))}
-      </div>
-      
-    </section>
+            <div className='card-container-cards'>       
+              {
+                products
+                  .filter(product => product.category === category)
+                  .map(product => (
+                    <Card
+                      key={product.id}
+                      title={product.title}
+                      oldPrice={1234}
+                      newPrice={product.price}
+                      currency={product.currency}
+                      grade={product.rate}
+                      img={product.img}
+                    />
+                  )
+                )
+              }
+            </div>          
+          </section>
+        ))
+      }
+    </>
   );
 };
 

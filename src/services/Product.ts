@@ -58,7 +58,7 @@ interface ProductInterface {
         {
           "id": 5,
           "title": "Samsung Galaxy Tab A8",
-          "price": 22990,
+          "price": 2299,
           "category": "Планшеты",
           "img": "images/img3.png",
           "rate": 4.5,
@@ -67,8 +67,8 @@ interface ProductInterface {
         {
           "id": 6,
           "title": "iRobot Roomba i7+",
-          "price": 69990,
-          "category": "Роботы-пылесосы",
+          "price": 6999,
+          "category": "Планшеты",
           "img": "images/img3.png",
           "rate": 4.8,
           "currency": "₽"
@@ -76,7 +76,7 @@ interface ProductInterface {
         {
           "id": 7,
           "title": "Xiaomi Mi TV P1 50",
-          "price": 34990,
+          "price": 3499,
           "category": "Телевизоры",
           "img": "images/img3.png",
           "rate": 4.6,
