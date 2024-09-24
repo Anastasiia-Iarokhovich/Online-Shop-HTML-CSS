@@ -37,6 +37,10 @@
     justify-content: baseline;
 }
 
+.active-language {
+    color: var(--orange-color);
+}
+
 .footer__menu-col-2-language-icon {
     cursor: default;
 }

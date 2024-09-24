@@ -1,4 +1,4 @@
-import ProductServiceInterface from "../interfaces/ProductServiceInterfacr";
+import ProductServiceInterface from "../interfaces/ProductServiceInterface";
 import Product from "../models/ProductInterface";
   
 class ProductService implements ProductServiceInterface {
@@ -65,6 +65,15 @@ class ProductService implements ProductServiceInterface {
       "category": "Телевизоры",
       "img": "images/img3.png",
       "rate": 4.6,
+      "currency": "₽"
+    },
+    {
+      "id": 8,
+      "title": "Apple AirPods Pro Max",
+      "price": 2327,
+      "category": "Наушники",
+      "img": "images/img2.png",
+      "rate": 4.5,
       "currency": "₽"
     }
   ];

@@ -6,14 +6,15 @@ interface ICartItemProps {
   price: number;
   currency: string;
   image: string;
+  onClick: () => void;
 }
 
-const CartItem: React.FC<ICartItemProps> = ({ title, price, currency, image }) => {
+const CartItem: React.FC<ICartItemProps> = ({ title, price, currency, image, onClick }) => {
   return (
     <div className='cart-item'>
 
       <div className='cart-item__header'>
-        <span className='cart-item__header-icon material-symbols-outlined'>
+        <span className='cart-item__header-icon material-symbols-outlined' onClick={onClick}>
           delete
         </span>
       </div>

@@ -3,13 +3,16 @@ import './Card-container.css';
 import Card from '../card/Card';
 import { Product, ProductService } from '../../services/ProductsService';
 import { useEffect, useState } from 'react';
+import { CartProductService } from '../../services/CartProductsService';
 
 interface ICardContainerProps {
   category: string;
 }
 
 const CardContainer: React.FC<ICardContainerProps> = ({}) => {
+  const cartProductService = new CartProductService();
 
+  const [count, setCount] = useState(0);
   const [products, setProducts] = useState<Product[]>([]);
 
   useEffect(() => {
@@ -44,7 +47,14 @@ const CardContainer: React.FC<ICardContainerProps> = ({}) => {
                       currency={product.currency}
                       grade={product.rate}
                       img={product.img}
-                      onClick={() => console.log(product.title)}
+                      onClick={() => {
+                        cartProductService.addCartProduct(product);
+                        console.log(product);
+                        cartProductService.increaseCount();
+                        console.log(cartProductService.count);
+                        // setCount(prevCount => prevCount + 1);
+                      }                      
+                    }
                     />
                   )
                 )

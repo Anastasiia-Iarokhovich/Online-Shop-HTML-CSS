@@ -21,7 +21,45 @@
     cursor: pointer;
 }
 
+.header__icons-favorite-badge {
+    display: none;
+}
+
+.icons-favorite-active {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 10px;
+    right: 212px;
+    border-radius: 50%;
+    background: var(--orange-color);
+    color: white;
+    height: 0.938rem;
+    width: 0.938rem;
+    font-size: 0.6rem;
+}
+
 .header__icons-cart {
     padding-left: 2rem;
     cursor: pointer;
+}
+
+.header__icons-cart-badge {
+    display: none;
+}
+
+.cart-count-active {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 10px;
+    right: 160px;
+    border-radius: 50%;
+    background: var(--orange-color);
+    color: white;
+    height: 0.938rem;
+    width: 0.938rem;
+    font-size: 0.6rem;
 }

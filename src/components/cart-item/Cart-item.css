@@ -1,6 +1,7 @@
 .cart-item {
     background-color: white;
     border-radius: 1.875rem;
+    margin-bottom: 1rem;
 
     /* add media query for mobile and tablet*/
     min-width: 30rem; 
