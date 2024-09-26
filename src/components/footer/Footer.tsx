@@ -8,7 +8,7 @@ interface IFooterProps {
 }
 
 const Footer: React.FC<IFooterProps> = ({ title }) => {
-  const [languageActive, setLanguageActive] = useState(false);
+  const [isBurgerActive, setBurgerActive] = useState(false);
 
   const navigate = useNavigate();
 
@@ -19,8 +19,8 @@ const Footer: React.FC<IFooterProps> = ({ title }) => {
     navigate('/');
   };
 
-  const toggleLanguage = () => {
-    setLanguageActive(!languageActive);
+  const toggleBurger = () => {
+    setBurgerActive(!isBurgerActive);
   };
 
   return (
@@ -41,13 +41,33 @@ const Footer: React.FC<IFooterProps> = ({ title }) => {
             <span className="footer__menu-col-2-language-icon material-symbols-outlined">
                 language
             </span>
-            <span className={`footer__menu-col-2-language-option${languageActive ? ' active-language' : ''}`} onClick={toggleLanguage}>Рус</span>
+            <span className='footer__menu-col-2-language-option'>Рус</span>
             <span className='footer__menu-col-2-language-option'>Eng</span>
-        </div>
-        
+        </div>      
       </div>
 
+
+
       <div className='footer__icons'>
+        <span className={`footer__icons-icon material-symbols-outlined${isBurgerActive ? ' burger-active' : ''}`}  id='burger' onClick={toggleBurger}>
+          menu
+          <div className='footer__icons-burger-menu'>
+            <p >Избранное</p>
+            <p onClick={handleCartClick}>Корзина</p>
+            <p onClick={() => alert('+123 456 789')}>Контакты</p>
+            <p >Условия сервиса</p>
+            <div className='footer__menu-col-2-language'>
+              <span className="footer__menu-col-2-language-icon material-symbols-outlined">
+                  language
+              </span>
+              <span className='footer__menu-col-2-language-option'>Рус</span>
+              <span className='footer__menu-col-2-language-option'>Eng</span>
+            </div>  
+          </div>
+        </span>
+
+        
+
         <a href='https://vk.com'>
           <img className='footer__icons-icon' src='images/vk.png' alt='vk'/>
         </a>
